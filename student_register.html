@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Student Registration</title>
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital,wght@1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="css/images/favicon.ico">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="icon" href="css/images/favicon.ico">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <section>
+    <div class="">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <!-- apollo symbol -->
+        <img src="css/images/amritafinal.svg" class="logo-1" alt="logo">
+        <!-- apollo x title -->
+        <h1 class="logo-2"> Leave Management System </h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#shrink">
+          <span class="navbar-toggler-text"> Menu </span>
+        </button>
+        <div class="collapse navbar-collapse" id="shrink">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html"> Login </a>
+            </li>
+            <li>
+              <a class="nav-link" href="about.html"> About Us </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="index.html"> Previous </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <section class="bg-light">
+    <div class="container">
+      <div class="pl-0 text-left">
+        <br><br>
+        <h1>Student Registration</h1>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-md-8 order-md-1 box">
+          <h4 class="mb-3">Student Details</h4>
+          <form action="student_register.php" method="post">
+          <!-- class="needs-validation" novalidate> -->
+
+          <div class="col-md-6 mb-3">
+            <label for="Name">Enter Student's Roll No.</label>
+            <input type="text" class="form-control" name = "studentroll" id="name" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+              <label for="username">Student Username</label>
+              <div class="input-group">
+                <input type="text" class="form-control" name="studentid" id="uname" required>
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid Username
+              </div>
+            </div>
+
+
+          <div class="col-md-6 mb-3">
+            <label for="patientpassword">Create a Password</label>
+            <input type="password" class="form-control" name = "studentpassword" id="Patientpassword" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="Name">Student Name</label>
+            <input type="text" class="form-control" name = "studentname" id="name" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="gender">Gender</label>
+            <select class="custom-select d-block w-100" name = "gender" id="gender" required>
+              <option value="">Choose...</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Others</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+              <label for="age">Age</label>
+              <div class="input-group">
+                <input type="number" class="form-control" name="age" id="age" min="0" max="25" required>
+              </div>
+            </div>
+
+        
+        <div class="col-md-6 mb-3">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="number" class="form-control" name="phone_no" min=10000 pattern="[0-9]{10}" id="phone_no" required>
+              <div class="invalid-feedback">
+                Please provide a valid phone number
+              </div>
+            </div> 
+
+          <div class="col-md-6 mb-3">
+              <label for="email">Email</label>
+              <input type="email" name="pemail" class="form-control" id="email" required>
+              <div class="invalid-feedback">
+                Please provide a valid email.
+              </div>
+            </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="Name">Security Question - Your Favorite Movie</label>
+            <input type="text" class="form-control" name = "secanswer1" id="name" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="Name">Security Question2 - First Vehicle Used</label>
+            <input type="text" class="form-control" name = "secanswer2" id="name" required>
+          </div>
+    
+            
+          <hr class="col-md-6 mb-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="save-info">
+            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+          </div>
+          <hr class="col-md-6 mb-3">
+          <button class="btn btn-primary btn-lg btn-block"type="submit">Register</button>
+        </form>
+        </div>
+      </div>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1 dev"> © SE - C12</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- <script src="form-validation.js"></script> -->
+</body>
+
+</html>
